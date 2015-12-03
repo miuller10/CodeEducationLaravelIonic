@@ -1,0 +1,64 @@
+
+
+<div class="form-group">
+				
+	<?php echo Form::label('name', 'Nome:'); ?>
+
+	<?php echo Form::text('user[name]', null, ['class'=>'form-control'] ); ?>
+
+
+</div>	
+
+<div class="form-group">
+				
+	<?php echo Form::label('email', 'Email:'); ?>
+
+	<?php echo Form::text('user[email]', null, ['class'=>'form-control'] ); ?>
+
+
+</div>	
+
+<div class="form-group">
+				
+	<?php echo Form::label('telefone', 'Telefone:'); ?>
+
+	<?php echo Form::text('phone', null, ['class'=>'form-control'] ); ?>
+
+
+</div>	
+
+<div class="form-group">
+				
+	<?php echo Form::label('Endereco', 'Endereço:'); ?>
+
+	<?php echo Form::textarea('address', null, ['class'=>'form-control'] ); ?>
+
+
+</div>	
+
+<div class="form-group">
+				
+	<?php echo Form::label('city', 'City:'); ?>
+
+	<?php echo Form::text('city', null, ['class'=>'form-control'] ); ?>
+
+
+</div>	
+
+<div class="form-group">
+				
+	<?php echo Form::label('estado', 'Estado:'); ?>
+
+	<?php echo Form::text('state', null, ['class'=>'form-control'] ); ?>
+
+
+</div>	
+
+<div class="form-group">
+				
+	<?php echo Form::label('cep', 'Cep:'); ?>
+
+	<?php echo Form::text('zipcode', null, ['class'=>'form-control'] ); ?>
+
+
+</div>	

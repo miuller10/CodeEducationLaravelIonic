@@ -1,0 +1,49 @@
+<?php $__env->startSection('content'); ?>
+
+	<div class="container">
+		<h3>Produtos</h3><br>
+
+		<a href="<?php echo e(route('admin.products.create')); ?>" class="btn btn-primary">Novo Produto</a><br>
+		
+		<table class="table" style="margin-top:40px;">
+
+			<thead>
+				
+				<tr>
+					
+					<th>ID</th>
+					<th>NOME</th>
+					<th>Categoria</th>
+					<th>Preço</th>
+					<th>AÇÃO</th>
+
+				</tr>
+
+			</thead>
+		
+			<tbody>
+				<?php foreach($products as $product): ?>
+				<tr>
+					
+					<td><?php echo e($product->id); ?></td>
+					<td><?php echo e($product->name); ?></td>
+					<td><?php echo e($product->category->name); ?></td>
+					<td><?php echo e($product->price); ?></td>
+					<td>
+						<a class="btn btn-success btn-sm" href="<?php echo e(route('admin.products.edit', ['id'=> $product->id])); ?>">Editar</a>
+						<a class="btn btn-danger btn-sm" href="<?php echo e(route('admin.products.destroy', ['id'=> $product->id])); ?>">Deletar</a>
+					</td>
+
+				</tr>
+				<?php endforeach; ?>
+			</tbody>
+
+		</table>
+	<!-- Paginação dos dados -->
+	<?php echo $products->render(); ?>
+
+		
+	</div>	
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
